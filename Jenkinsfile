@@ -16,7 +16,7 @@ node {
             sh "docker login -u ${env.DocCredUser} -p ${env.DocCredPassword}"
             sh 'docker push mujeeb98/html1:latest'
             sh "docker pull mujeeb98/html1:latest"
-            sh "docker run -d -t -p 3000:3000 --name html1containerr. mujeeb98/html1:latest"
+              sh "docker run -d -t -p 3000:3000 --name html1container${BUILD_NUMBER}. mujeeb98/html1:latest"
       }
     }  
 }
