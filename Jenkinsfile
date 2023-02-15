@@ -20,6 +20,7 @@ node {
         stage('Pull docker Image') {
            sh "docker pull mujeeb98/html1:latest"
               sh "docker run -d -t -p 3000:3000 --name html1container${BUILD_NUMBER}. mujeeb98/html1:latest"
+            sh "docker ps"
         }
     }  
 }
